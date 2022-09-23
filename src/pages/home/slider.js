@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useState } from 'react';
 import styled from 'styled-components';
 import img1 from './empty.png';
 import img2 from './default.png';
@@ -61,13 +61,13 @@ const Slider=()=> {
     //   value: 0.1
     // }
     const [value,setvalue] = useState('')
-    const onHandleChange = (e) => {
+    const onhandlechange=(e) => {
         e.preventDefault()
         setvalue({ value: e.target.value })}
     
     const imageshow = (value) => {
       switch (value) {
-        case (0<=value && value <25):
+        default :
           return img1
         case (25<=value && value<50):
           return img2
